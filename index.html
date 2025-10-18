@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetBite | Kue & Dessert Lezat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body class="bg-blue-50">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-300 p-4 text-white flex justify-between">
+    <h1 class="text-2xl font-bold">SweetBite</h1>
+    <div>
+      <a href="index.html" class="px-3 hover:underline">Home</a>
+      <a href="produk.html" class="px-3 hover:underline">Produk</a>
+      <a href="contact.html" class="px-3 hover:underline">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="relative overflow-hidden h-[60vh]">
+    <div class="flex transition-transform duration-700 ease-in-out" id="slider">
+      <div class="min-w-full h-[60vh] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style="background-image: url('img/banner1.jpg');">
+        <div class="bg-blue-500 bg-opacity-60 p-4 rounded-lg">Rasakan Manisnya Setiap Gigitan 🍰</div>
+      </div>
+      <div class="min-w-full h-[60vh] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style="background-image: url('img/banner2.jpg');">
+        <div class="bg-pink-500 bg-opacity-60 p-4 rounded-lg">Setiap Kue, Cinta dalam Gigitan 💖</div>
+      </div>
+      <div class="min-w-full h-[60vh] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style="background-image: url('img/banner3.jpg');">
+        <div class="bg-yellow-500 bg-opacity-60 p-4 rounded-lg">Fresh from the Oven, Just for You 🍪</div>
+      </div>
+    </div>
+
+    <!-- Tombol navigasi -->
+    <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-blue-700 rounded-full p-2 hover:bg-opacity-100">❮</button>
+    <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-blue-700 rounded-full p-2 hover:bg-opacity-100">❯</button>
+  </section>
+
+  <!-- Produk Unggulan -->
+  <section class="p-8 text-center">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">Produk Unggulan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card bg-white shadow-lg p-4 rounded-lg">
+        <img src="cake1.jpg" class="rounded-lg mb-3" alt="Cupcake Vanilla">
+        <h3 class="font-semibold text-lg">Burnt Cheese Cake</h3>
+        <p class="text-gray-500">Rp22.000</p>
+      </div>
+      <div class="card bg-white shadow-lg p-4 rounded-lg">
+        <img src="pastry1.jpg" class="rounded-lg mb-3" alt="Brownies Cokelat">
+        <h3 class="font-semibold text-lg">Cheese Choux</h3>
+        <p class="text-gray-500">Rp9.000</p>
+      </div>
+      <div class="card bg-white shadow-lg p-4 rounded-lg">
+        <img src="cake3.jpg" class="rounded-lg mb-3" alt="Macaron Mix">
+        <h3 class="font-semibold text-lg">Tiramisu Cake</h3>
+        <p class="text-gray-500">Rp325.000</p>
+      </div>
+    </div>
+    <a href="produk.html" class="mt-6 inline-block bg-blue-400 text-white py-2 px-5 rounded-lg hover:bg-pink-500">Lihat Semua Produk</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-300 text-center text-white p-4 mt-10">
+    © 2025 SweetBite | Dibuat oleh Reva
+  </footer>
+
+  <!-- Script Slider -->
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('#slider > div');
+    const totalSlides = slides.length;
+    let index = 0;
+
+    function showSlide(i) {
+      slider.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide(index);
+    });
+
+    // Auto-slide setiap 4 detik
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    }, 4000);
+  </script>
+
+</body>
+</html>
