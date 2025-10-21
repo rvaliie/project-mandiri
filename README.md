@@ -40,6 +40,9 @@ Tampilan Produk
 Tampilan Kontak
 ![Deskripsi Gambar](tampilan/tampilankontak.jpeg)
 
+## Link video YouTube
+https://youtu.be/gw5ZIX8lO6M
+
 ## Informasi 
 Nama (NIM): Revalina Natasya Sinaga (24051204123)
 Mata Kuliah: Pemrograman Berbasis Platform (PBP)
