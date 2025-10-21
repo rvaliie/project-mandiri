@@ -43,5 +43,4 @@ Tampilan Kontak
 ## Informasi 
 Nama (NIM): Revalina Natasya Sinaga (24051204123)
 Mata Kuliah: Pemrograman Berbasis Platform (PBP)
-Proyek: Website jual beli roti/bakery shop
 Dosen Pengampu: Rifqi Abdillah, S.Tr.T., M.Kom.
